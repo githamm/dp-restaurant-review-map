@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+	 <!--[if lte IE 8]>
+	     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	 <![endif]-->
+	</head>
+  <body>
+		<!--
+		
+			This example uses:
+				Leaflet + custom tile provider (CloudMade)
+				Handlebars templates for the popups
+		
+		-->
+		
+    <div id="map" style="height: 500px; width: 600px"></div>
+
+    <script type="text/javascript" src="common/tabletop.js"></script>
+    <script type="text/javascript" src="common/handlebars.js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+
+    <script type="text/javascript" src="../src/mapsheet.js"></script>
+
+    <script id="popup-template" type="text/x-handlebars-template">
+			<h3>{{town}}</h3>
+			<p>{{streetaddress}}</p>
+    </script>
+
+    <script type="text/javascript">
+    	window.onload = function() { init() };
+
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AtG9_k99Q_n6dE54Vl83elpDNm9CQmxQRW5KTVZqWUE&output=html';
+			
+      function init() {
+        var source   = document.getElementById("popup-template").innerHTML;
+        var template = Handlebars.compile(source);
+
+        Mapsheet( { key: public_spreadsheet_url,
+											element: "map",
+											provider: Mapsheet.Providers.Leaflet,
+											popupTemplate: template,
+											layerOptions: {
+												subdomains: 'abc',
+												tilePath: 'http://{s}.tile.cloudmade.com/{apikey}/{styleId}/256/{z}/{x}/{y}.png',
+												styleId: 1930,
+												apikey: 'badaa86b73da4f5c83bf0d79030622f7', /* You gotta get your own API key! Visit http://www.cloudmade.com */
+												attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://cloudmade.com">CloudMade</a>'
+											},
+									} );
+      }
+
+      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");        
+    </script>
+  </body>
+</html>

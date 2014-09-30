@@ -1,0 +1,118 @@
+/* @media only screen and (max-width: 320px){
+  img#thumbnail { width:50px; }
+} */
+
+#map_container {
+  line-height: normal;
+}  
+
+#thumbnail {
+  width: 231px;
+  height: 150px;
+}  
+
+/* a:link {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #4682B4;
+  text-decoration: none;
+} */
+
+/* a:visited {
+  color: #4682B4;
+}  */
+
+a:hover {
+  color: red;
+}
+
+/* a.review:link {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-color: white;
+} */
+
+a.review:visited {
+  color: #4682B4;
+}  
+
+a.review:hover {
+  color: red;
+}
+
+#popup {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+
+#stars {
+  width: auto; /* was 225 */
+  height: 20px; /* was 40 */
+  margin-top: 0px;
+}
+
+#menustars {
+  width: auto;
+  height: 20px;
+  color: #ccc;
+}
+
+#submenustars {
+  width: auto;
+  height: 20px;
+  padding-left: 15px;
+}
+
+#modalstars {
+  width: auto;
+  height: 30px;
+  margin-right: -70px;
+  margin-top: -4px;
+}
+
+#menuheader {
+  font-weight: bold;
+  padding-left: 25px;
+}
+  
+#map {
+  width: 100%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  align: center;
+}
+
+.gm-style-iw {
+  overflow: hidden !important;
+  max-width: 231px;
+}
+
+img {
+  max-width: none;
+}
+
+.mapsheet-popup {
+  overflow-x: hidden;
+}
+
+.mapsheet-popup h2 {
+  font-family: 'Droid Sans', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+.button {
+  padding: 10px;
+  margin-bottom: 0px;
+}
