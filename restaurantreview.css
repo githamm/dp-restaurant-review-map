@@ -1,7 +1,3 @@
-/* @media only screen and (max-width: 320px){
-  img#thumbnail { width:50px; }
-} */
-
 #map_container {
   line-height: normal;
 }  
@@ -11,30 +7,9 @@
   height: 150px;
 }  
 
-/* a:link {
-  font-family: 'Droid Sans', Arial, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #4682B4;
-  text-decoration: none;
-} */
-
-/* a:visited {
-  color: #4682B4;
-}  */
-
 a:hover {
   color: red;
 }
-
-/* a.review:link {
-  font-family: 'Droid Sans', Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  text-color: white;
-} */
 
 a.review:visited {
   color: #4682B4;
